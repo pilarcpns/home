@@ -124,10 +124,10 @@ ul {
 
 /* === TYPOGRAPHY === */
 :root {
-  --font-display: "Cinzel", "Trajan Pro", Georgia, serif;
-  --font-subheading: "Playfair Display", "Bodoni Moda", Georgia, serif;
   --font-body: "Inter", system-ui, -apple-system, sans-serif;
-  --font-mono: "Roboto Mono", "JetBrains Mono", ui-monospace, monospace;
+  --font-display: var(--font-body);
+  --font-subheading: var(--font-body);
+  --font-mono: var(--font-body);
 
   /* Radius (per Mas) */
   --radius-sm: 6px;
@@ -136,7 +136,7 @@ ul {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: 0.02em;
@@ -145,7 +145,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .section-subheading,
 .section-eyebrow {
-  font-family: var(--font-subheading);
+  font-family: var(--font-body);
   font-style: italic;
   font-weight: 500;
   letter-spacing: 0.01em;
@@ -154,7 +154,7 @@ h1, h2, h3, h4, h5, h6 {
 .cta-tagline,
 .pricing-tagline,
 .problem-tagline {
-  font-family: var(--font-subheading);
+  font-family: var(--font-body);
   font-style: italic;
   font-weight: 400;
   letter-spacing: 0.01em;
@@ -162,13 +162,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .pricing-value,
 .stat-number {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-feature-settings: "tnum";
   font-weight: 500;
 }
 
 code, kbd, samp, pre {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 0.875rem;
 }
 
@@ -366,7 +366,7 @@ section {
 }
 
 .nav-logo-text {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: 1.125rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -512,7 +512,7 @@ section {
 }
 
 .hero-subtext {
-  font-family: var(--font-subheading);
+  font-family: var(--font-body);
   font-style: italic;
   font-size: 1.125rem;
   color: var(--color-text-muted);
@@ -601,7 +601,7 @@ section {
 }
 
 .stat-label {
-  font-family: var(--font-subheading);
+  font-family: var(--font-body);
   font-style: italic;
   font-size: 0.9375rem;
   color: var(--color-text-muted);
@@ -641,7 +641,7 @@ section {
 }
 
 .problem-num {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--color-accent);
@@ -650,7 +650,7 @@ section {
 }
 
 .problem-title {
-  font-family: var(--font-subheading);
+  font-family: var(--font-body);
   font-size: 1.25rem;
   font-weight: 600;
   text-transform: none;
@@ -705,7 +705,7 @@ section {
 }
 
 .solution-num {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: 2.5rem;
   font-weight: 600;
   color: var(--color-accent);
@@ -715,7 +715,7 @@ section {
 }
 
 .solution-title {
-  font-family: var(--font-subheading);
+  font-family: var(--font-body);
   font-size: 1.125rem;
   font-weight: 600;
   text-transform: none;
@@ -864,7 +864,7 @@ section {
   transform: translateX(-50%);
   background: var(--color-accent);
   color: var(--color-text-on-accent);
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 0.75rem;
   font-weight: 500;
   padding: 0.25rem 0.75rem;
@@ -874,7 +874,7 @@ section {
 }
 
 .pricing-name {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: 1.125rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -907,7 +907,7 @@ section {
 
 .pricing-value-text {
   font-size: 1.125rem;
-  font-family: var(--font-subheading);
+  font-family: var(--font-body);
   font-style: italic;
 }
 
@@ -986,7 +986,7 @@ section {
 
 .faq-item summary {
   padding: 1rem 1.25rem;
-  font-family: var(--font-subheading);
+  font-family: var(--font-body);
   font-weight: 600;
   font-size: 1rem;
   color: var(--color-text);
@@ -1005,7 +1005,7 @@ section {
 
 .faq-item summary::after {
   content: "+";
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 1.25rem;
   color: var(--color-accent);
   flex-shrink: 0;
@@ -1056,7 +1056,7 @@ section {
 }
 
 .cta-subtext {
-  font-family: var(--font-subheading);
+  font-family: var(--font-body);
   font-style: italic;
   font-size: 1.0625rem;
   color: var(--color-text-muted);
@@ -1109,7 +1109,7 @@ section {
 }
 
 .footer-brand {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: 1.125rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -1126,7 +1126,7 @@ section {
 }
 
 .footer-heading {
-  font-family: var(--font-subheading);
+  font-family: var(--font-body);
   font-size: 0.875rem;
   font-weight: 600;
   text-transform: uppercase;

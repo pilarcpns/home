@@ -1,8 +1,9 @@
 /* ====================================================================
-   PILAR PNS LANDING PAGE
+   PILARCPNS LANDING PAGE
    script.js (vanilla, no library)
    - Theme toggle (light / dark)
    - FAQ accordion (native details, no JS needed for toggle itself)
+   - Mobile menu (hamburger)
    - Smooth scroll for nav anchors
    ==================================================================== */
 

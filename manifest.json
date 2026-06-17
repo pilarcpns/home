@@ -1,7 +1,7 @@
 {
-  "name": "Pilar PNS",
-  "short_name": "Pilar PNS",
-  "description": "Latihan soal tes PNS lengkap dengan pembahasan.",
+  "name": "PilarCPNS",
+  "short_name": "PilarCPNS",
+  "description": "Latihan soal tes PNS dengan pembahasan lengkap untuk calon PNS.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#160B06",
@@ -15,12 +15,14 @@
     {
       "src": "assets/icon-192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "assets/icon-512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     }
   ]
 }

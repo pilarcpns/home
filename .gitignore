@@ -1,0 +1,27 @@
+# Secrets
+.env*
+*.env
+
+# Backups
+*.bak
+backup_*/
+*~
+.cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Node (future-proofing)
+node_modules/
+npm-debug.log*
+
+# Editor
+.vscode/
+.idea/
+*.swp

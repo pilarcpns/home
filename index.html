@@ -10,20 +10,20 @@
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://pilarcpns.com/">
+  <meta property="og:url" content="https://pilarcpns.github.io/home/">
   <meta property="og:title" content="Pilar PNS - Latihan Soal Tes PNS Lengkap dengan Pembahasan">
   <meta property="og:description" content="13 modul, lebih dari 1.199 soal latihan dengan pembahasan lengkap untuk persiapan tes PNS.">
-  <meta property="og:image" content="https://pilarcpns.com/assets/og-image.png">
+  <meta property="og:image" content="https://pilarcpns.github.io/home/assets/og-image.png">
   <meta property="og:locale" content="id_ID">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Pilar PNS - Latihan Soal Tes PNS">
   <meta name="twitter:description" content="13 modul, lebih dari 1.199 soal dengan pembahasan lengkap.">
-  <meta name="twitter:image" content="https://pilarcpns.com/assets/og-image.png">
+  <meta name="twitter:image" content="https://pilarcpns.github.io/home/assets/og-image.png">
 
   <!-- Canonical -->
-  <link rel="canonical" href="https://pilarcpns.com/">
+  <link rel="canonical" href="https://pilarcpns.github.io/home/">
 
   <!-- Theme color (matches dark default bg) -->
   <meta name="theme-color" content="#160B06">
@@ -137,7 +137,18 @@
         <img src="assets/logo.jpg" alt="" width="40" height="40">
         <span class="nav-logo-text">PILAR PNS</span>
       </a>
-      <nav class="nav-menu" aria-label="Navigasi utama">
+      <button class="nav-toggle" aria-label="Buka menu navigasi" aria-expanded="false" type="button">
+        <svg class="icon icon-menu" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+      <nav class="nav-menu" id="nav-menu" aria-label="Navigasi utama">
         <a href="#problem" class="nav-link">Masalah</a>
         <a href="#solution" class="nav-link">Solusi</a>
         <a href="#sample" class="nav-link">Sample</a>
@@ -173,8 +184,16 @@
           </div>
         </div>
         <div class="hero-media">
-          <img src="https://picsum.photos/seed/pilar-pns-hero/1600/1200" alt="Ilustrasi meja belajar dengan buku Pilar PNS" width="1600" height="1200" loading="eager" fetchpriority="high">
+          <img src="assets/hero-illustration.jpg" alt="Ilustrasi pelajar Indonesia sedang belajar untuk tes PNS" width="1024" height="1024" loading="eager" fetchpriority="high">
         </div>
+      </div>
+      <div class="container">
+        <ul class="hero-badges" aria-label="Jaminan produk">
+          <li class="hero-badge"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>100% Ada Pembahasan</li>
+          <li class="hero-badge"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Update Gratis</li>
+          <li class="hero-badge"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Akses Selamanya</li>
+          <li class="hero-badge"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Format PDF</li>
+        </ul>
       </div>
     </section>
 
@@ -282,7 +301,7 @@
         </header>
         <a href="sample-modul-1.pdf" class="sample-link" download>
           <div class="sample-preview">
-            <img src="https://picsum.photos/seed/pilar-pns-sample/600/800" alt="Preview halaman sample Modul 1 Pilar PNS" width="600" height="800" loading="lazy">
+            <img src="assets/sample-preview.png" alt="Preview halaman pertama Modul 1 Pilar PNS yang sudah dirender" width="600" height="800" loading="lazy">
           </div>
           <div class="sample-action">
             <span class="sample-button">Download Sample PDF</span>
@@ -348,6 +367,55 @@
               <li>Cocok untuk komunitas atau bimbel</li>
             </ul>
             <a href="mailto:pilarcpns@gmail.com?subject=Order%20Paket%20Custom%20Pilar%20PNS" class="btn btn-outline">Konsultasi via Email</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 6.5. TRUST / CREDIBILITY ========== -->
+    <section class="trust" aria-label="Tentang Pilar PNS dan testimoni pengguna">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title">Dibuat oleh Praktisi, untuk Calon PNS</h2>
+          <p class="section-subtext">Latar belakang pendiri dan feedback pengguna beta test.</p>
+        </header>
+
+        <div class="founder-card">
+          <div class="founder-avatar" aria-hidden="true">AP</div>
+          <div class="founder-content">
+            <h3 class="founder-name">Aditya Prima</h3>
+            <p class="founder-role">Founder Pilar PNS, Praktisi Hukum Pertambangan dan AI Solutions Architect</p>
+            <p class="founder-bio">Pilar PNS dibuat sebagai solusi dari pengalaman sendiri mempersiapkan tes PNS. Latihan soal TWK, TIU, TKP sering tersebar di banyak tempat, tanpa urutan, tanpa pembahasan yang konsisten. Pilar PNS mengumpulkan semua dalam satu paket terstruktur dengan pembahasan lengkap untuk setiap soal.</p>
+          </div>
+        </div>
+
+        <div class="testimonials">
+          <h3 class="testimonials-heading">Feedback Pengguna Beta Test</h3>
+          <div class="testimonials-grid">
+            <figure class="testimonial">
+              <span class="testimonial-tag">Beta Tester</span>
+              <blockquote class="testimonial-quote">Soalnya banyak dan format CAT mirip beneran. Pembahasannya juga runut, gak cuma kunci jawaban.</blockquote>
+              <figcaption class="testimonial-author">
+                <span class="testimonial-name">Rina W.</span>
+                <span class="testimonial-meta">Calon PNS 2026, Jakarta</span>
+              </figcaption>
+            </figure>
+            <figure class="testimonial">
+              <span class="testimonial-tag">Beta Tester</span>
+              <blockquote class="testimonial-quote">Harga jauh lebih hemat dari bimbel. Bisa latihan kapan aja dari HP. PDF-nya ringan, gak makan storage.</blockquote>
+              <figcaption class="testimonial-author">
+                <span class="testimonial-name">Andika P.</span>
+                <span class="testimonial-meta">Calon PNS 2026, Bandung</span>
+              </figcaption>
+            </figure>
+            <figure class="testimonial">
+              <span class="testimonial-tag">Beta Tester</span>
+              <blockquote class="testimonial-quote">TKP-nya yang paling bantu. Biasanya bingung scoring 1-5 di TKP, di sini ada acuan jelas per pernyataan.</blockquote>
+              <figcaption class="testimonial-author">
+                <span class="testimonial-name">Sari M.</span>
+                <span class="testimonial-meta">Mahasiswa Tingkat Akhir, Surabaya</span>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </div>

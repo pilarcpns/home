@@ -63,6 +63,25 @@
     });
   });
 
+  // === MOBILE MENU TOGGLE ===
+  var navToggle = document.querySelector('.nav-toggle');
+  var navMenu = document.getElementById('nav-menu');
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', function () {
+      var isOpen = navMenu.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    // Close menu when clicking a nav link
+    navMenu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        if (navMenu.classList.contains('open')) {
+          navMenu.classList.remove('open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  }
+
   // === KEYBOARD: ESCAPE closes FAQ details if focused ===
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {

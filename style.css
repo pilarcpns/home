@@ -144,7 +144,6 @@ ul {
   --font-display: var(--font-body);
   --font-subheading: var(--font-body);
   --font-mono: var(--font-body);
-  --font-serif: "Lora", Georgia, "Times New Roman", serif;
 
   /* Radius (per Mas - rounded but formal) */
   --radius-sm: 10px;

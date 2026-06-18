@@ -92,4 +92,33 @@
       }
     }
   });
+
+  // === FADE-IN ON SCROLL (IntersectionObserver) ===
+  // Respect prefers-reduced-motion: skip observer, sections stay visible.
+  // Targets main > section only (header sticky + footer excluded).
+  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!prefersReduced && 'IntersectionObserver' in window) {
+    var fadeTargets = document.querySelectorAll('main > section');
+    fadeTargets.forEach(function (el) {
+      el.classList.add('fade-on-scroll');
+    });
+
+    var fadeObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          fadeObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px 0px -80px 0px',
+      threshold: 0.05
+    });
+
+    fadeTargets.forEach(function (el) {
+      fadeObserver.observe(el);
+    });
+  }
 })();

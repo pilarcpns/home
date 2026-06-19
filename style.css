@@ -1335,21 +1335,21 @@ section {
 .footer-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
-@media (min-width: 640px) {
-  .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  max-width: 640px;
 }
 
 @media (min-width: 1024px) {
   .footer-grid {
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 2.5rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 960px;
   }
+}
+
+.footer-brand-col {
+  max-width: 48ch;
 }
 
 .footer-brand {
@@ -1367,30 +1367,6 @@ section {
   color: var(--color-text-muted);
   line-height: 1.5;
   max-width: 36ch;
-}
-
-.footer-heading {
-  font-family: var(--font-body);
-  font-size: 0.875rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-text);
-  margin-bottom: 0.75rem;
-}
-
-.footer-links li {
-  margin-bottom: 0.5rem;
-}
-
-.footer-links a {
-  font-size: 0.875rem;
-  color: var(--color-text-muted);
-  transition: color 0.2s ease;
-}
-
-.footer-links a:hover {
-  color: var(--color-accent);
 }
 
 .footer-bottom {
@@ -1467,41 +1443,6 @@ section {
   .pricing-card-featured,
   .sample-link:active {
     transform: none !important;
-  }
-}
-
-/* === HERO BADGES (trust indicators) === */
-.hero-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1.75rem;
-  margin-top: 2rem;
-  padding: 1.25rem 0 0;
-  border-top: 1px solid var(--color-border);
-  list-style: none;
-}
-
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: var(--color-text-muted);
-  letter-spacing: 0.01em;
-}
-
-.hero-badge .icon {
-  color: var(--color-accent);
-  flex-shrink: 0;
-}
-
-@media (max-width: 767px) {
-  .hero-badges {
-    gap: 0.5rem 1rem;
-  }
-  .hero-badge {
-    font-size: 0.75rem;
   }
 }
 
@@ -1971,5 +1912,21 @@ section {
 
   a {
     text-decoration: underline;
+  }
+}
+
+/* === REDUCED MOTION (accessibility) === */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html {
+    scroll-behavior: auto;
   }
 }

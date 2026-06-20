@@ -6,13 +6,15 @@
 */
 
 @theme {
-  /* Color palette  -  light mode (primary, sesuai image) */
+  /* Color palette  -  light mode (primary, sesuai image)
+     Contrast notes: text accent #6B4423 reads 5.90+ on bg-section-alt and 8.48 on white (AA PASS)
+     Footer bg #8B5A2B gives 5.84 with white text (AA PASS, was 3.73 with #A67C52) */
   --color-cream: #F5F1E9;
   --color-tan: #E8D5B5;
   --color-dark-brown: #3A2E22;
   --color-gold: #D4A76A;
   --color-medium-brown: #B8956A;
-  --color-deep-brown: #A67C52;
+  --color-deep-brown: #8B5A2B;
 
   /* Derived: text on light bg */
   --color-text-primary: #3A2E22;
@@ -23,9 +25,9 @@
   --color-bg-page: #F5F1E9;
   --color-bg-card: #FFFFFF;
   --color-bg-section-alt: #E8D5B5;
-  --color-bg-footer: #A67C52;
+  --color-bg-footer: #8B5A2B;
   --color-border: #B8956A;
-  --color-accent: #D4A76A;
+  --color-accent: #6B4423;
 
   /* Spacing  -  8px base */
   --spacing-unit: 8px;

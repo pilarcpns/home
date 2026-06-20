@@ -1,0 +1,15 @@
+{
+  "name": "pilarcpns-landing",
+  "version": "2.0.0",
+  "private": true,
+  "description": "PilarCPNS landing page — overhaul 2026-06-20, image reference as visual SSoT",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build:full": "tailwindcss -i ./src/input.css -o ./style.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.1",
+    "tailwindcss": "^4.3.1"
+  }
+}

@@ -7,6 +7,7 @@
 backup_*/
 *~
 .cache/
+archive/
 
 # OS
 .DS_Store
@@ -26,3 +27,9 @@ npm-debug.log*
 .idea/
 *.swp
 docs/
+
+# Internal design references
+visual-reference-*.md
+
+# Duplicate build output
+dist/output.min.css

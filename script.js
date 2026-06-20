@@ -12,15 +12,20 @@
 
   // === THEME TOGGLE ===
   var root = document.documentElement;
-  var toggle = document.querySelector('.theme-toggle');
-  var STORAGE_KEY = 'pilarpns-theme';
+  var toggle = document.querySelector('#theme-toggle');
+  var STORAGE_KEY = 'pilarcpns-theme';
 
   function applyTheme(theme) {
     root.setAttribute('data-theme', theme);
+    // Update meta theme-color for mobile browsers
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) {
+      meta.setAttribute('content', theme === 'dark' ? '#1F1008' : '#F5F1E9');
+    }
   }
 
   function currentTheme() {
-    return root.getAttribute('data-theme') || 'dark';
+    return root.getAttribute('data-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   }
 
   // Sync UI to stored value on load (FOUC script already set attribute, this confirms)
@@ -65,18 +70,18 @@
   });
 
   // === MOBILE MENU TOGGLE ===
-  var navToggle = document.querySelector('.nav-toggle');
-  var navMenu = document.getElementById('nav-menu');
-  if (navToggle && navMenu) {
+  var navToggle = document.querySelector('#nav-toggle');
+  var mobileMenu = document.getElementById('mobile-menu');
+  if (navToggle && mobileMenu) {
     navToggle.addEventListener('click', function () {
-      var isOpen = navMenu.classList.toggle('open');
+      var isOpen = mobileMenu.classList.toggle('hidden') === false;
       navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
     // Close menu when clicking a nav link
-    navMenu.querySelectorAll('a').forEach(function (link) {
+    mobileMenu.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
-        if (navMenu.classList.contains('open')) {
-          navMenu.classList.remove('open');
+        if (!mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
           navToggle.setAttribute('aria-expanded', 'false');
         }
       });

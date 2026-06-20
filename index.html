@@ -1,594 +1,350 @@
 <!DOCTYPE html>
-<html lang="id" data-theme="dark">
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PilarCPNS - Latihan Soal Tes PNS Lengkap dengan Pembahasan</title>
-  <meta name="description" content="PilarCPNS menyediakan 13 modul latihan soal TWK, TIU, TKP untuk persiapan tes PNS. Lebih dari 1.199 soal dengan pembahasan lengkap. Format PDF, harga terjangkau.">
-  <meta name="keywords" content="soal PNS, latihan PNS, TWK, TIU, TKP, CAT, simulasi PNS, PilarCPNS, try out PNS, pembahasan PNS, calon PNS">
-  <meta name="author" content="PilarCPNS">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PilarCPNS  -  Lulus Tes PNS Dimulai dari Sini</title>
+  <meta name="description" content="PilarCPNS adalah paket modul PDF TWK, TIU, TKP untuk persiapan tes PNS. Lengkap, terstruktur, harga terjangkau." />
+  <meta name="theme-color" content="#F5F1E9" />
 
   <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://pilarcpns.web.id/">
-  <meta property="og:title" content="PilarCPNS - Latihan Soal Tes PNS Lengkap dengan Pembahasan">
-  <meta property="og:description" content="13 modul, lebih dari 1.199 soal latihan dengan pembahasan lengkap untuk persiapan tes PNS.">
-  <meta property="og:image" content="https://pilarcpns.web.id/assets/og-image.png">
-  <meta property="og:locale" content="id_ID">
+  <meta property="og:title" content="PilarCPNS  -  Lulus Tes PNS Dimulai dari Sini" />
+  <meta property="og:description" content="Modul PDF TWK, TIU, TKP untuk persiapan tes PNS. Lengkap, terstruktur, harga terjangkau." />
+  <meta property="og:image" content="assets/og-image.png" />
+  <meta property="og:type" content="website" />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="PilarCPNS - Latihan Soal Tes PNS">
-  <meta name="twitter:description" content="13 modul, lebih dari 1.199 soal dengan pembahasan lengkap.">
-  <meta name="twitter:image" content="https://pilarcpns.web.id/assets/og-image.png">
+  <!-- Fonts: Poppins primary (sesuai image reference) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://pilarcpns.web.id/">
-
-  <!-- Theme color (matches dark default bg) -->
-  <meta name="theme-color" content="#160B06">
+  <!-- Stylesheet (Tailwind compiled) -->
+  <link rel="stylesheet" href="dist/output.css" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" href="assets/favicon-32.png" />
 
-  <!-- Preconnect Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- Google Fonts: Plus Jakarta Sans (formal tapi rounded) + Roboto Mono (numeric) -->
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- FOUC prevent: apply theme before first paint -->
-  <script>
+  <style>
+    /* FOUC prevention: read theme from localStorage before paint */
     (function() {
-      var t = localStorage.getItem('pilarpns-theme');
-      if (t) {
-        document.documentElement.setAttribute('data-theme', t);
-      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-      } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-      }
+      try {
+        var saved = localStorage.getItem('pilarcpns-theme');
+        if (saved) document.documentElement.setAttribute('data-theme', saved);
+      } catch (e) {}
     })();
-  </script>
-
-  <link rel="stylesheet" href="style.css">
-
-  <!-- JSON-LD FAQ Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Format file apa yang dikirim?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "PDF. Bisa dibuka di HP, laptop, atau dicetak A4. Tidak perlu install aplikasi tambahan. Disarankan menggunakan Adobe Acrobat Reader atau browser Chrome untuk pengalaman membaca terbaik."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Apakah bisa dicetak?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ya, format A4 hitam putih. Hemat tinta, hasil tetap jelas. Cocok untuk latihan dengan timer seperti simulasi CAT sungguhan."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Pembahasannya seperti apa?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Setiap soal ada pembahasan detail, bukan hanya kunci jawaban. TWK dan TIU ada penjelasan logika. TKP ada scoring 5-1 per pernyataan."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Berapa lama akses setelah beli?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Selamanya. Akses permanen, tidak ada batas waktu. File PDF bisa disimpan di perangkat Anda dan digunakan kapan saja."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Bagaimana cara ordernya?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Lewat lynk.id untuk pembayaran otomatis (QRIS, transfer bank, e-wallet). File dikirim ke email dalam hitungan menit setelah pembayaran. Untuk paket custom, gunakan email pilarcpns@gmail.com untuk konsultasi."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Apakah bisa refund?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Karena ini produk digital dan file langsung dikirim setelah pembayaran, refund tidak tersedia. Tersedia sample gratis 1 modul penuh untuk cek kualitas sebelum membeli."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Update gratis berlaku untuk apa?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Jika ada revisi soal, perbaikan pembahasan, atau penambahan modul baru, semua pembeli lama akan mendapat update gratis tanpa biaya tambahan."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Apakah ada jaminan lulus?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Tidak ada yang bisa menjamin kelulusan. PilarCPNS adalah alat bantu latihan. Hasil tetap bergantung pada usaha dan persiapan Anda. Dengan 1.199 lebih soal dan pembahasan lengkap, Anda punya modal kuat untuk berlatih."
-        }
-      }
-    ]
-  }
-  </script>
+  </style>
+  <style>
+    /* Critical inline CSS (no FOUC) */
+    html { background: #F5F1E9; }
+    html[data-theme="dark"] { background: #1F1008; }
+    body {
+      font-family: "Poppins", "Plus Jakarta Sans", system-ui, sans-serif;
+      background: var(--color-bg-page, #F5F1E9);
+      color: var(--color-text-primary, #3A2E22);
+      margin: 0;
+      -webkit-font-smoothing: antialiased;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      body { transition: none; }
+    }
+    .hero-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 12px 40px rgba(58, 46, 34, 0.12);
+    }
+    .faq-item summary { cursor: pointer; list-style: none; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item[open] summary .faq-icon { transform: rotate(45deg); }
+    .faq-icon { transition: transform 0.2s ease; display: inline-block; }
+    @media (prefers-reduced-motion: reduce) {
+      .faq-icon { transition: none; }
+    }
+    .fade-on-scroll { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .fade-on-scroll.is-visible { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) {
+      .fade-on-scroll { opacity: 1; transform: none; transition: none; }
+    }
+  </style>
 </head>
 <body>
-
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-
-  <!-- ========== NAVIGATION ========== -->
-  <header class="site-header">
-    <div class="container nav-container">
-      <a href="#main-content" class="nav-logo" aria-label="PilarCPNS, ke atas">
-        <img src="assets/logo.png" alt="Logo PilarCPNS, flame pada dua pilar coklat" width="40" height="40">
-        <span class="nav-logo-text">PILARCPNS</span>
+  <!-- ===== NAVIGATION ===== -->
+  <header class="sticky top-0 z-50 backdrop-blur" style="background: rgba(245, 241, 233, 0.95); border-bottom: 1px solid rgba(184, 149, 106, 0.15);">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 font-bold text-lg" style="color: var(--color-text-primary);">
+        <img src="assets/logo.png" alt="PilarCPNS" class="h-8 w-8" />
+        <span>PilarCPNS</span>
       </a>
-      <button class="nav-toggle" aria-label="Buka menu navigasi" aria-expanded="false" type="button">
-        <svg class="icon icon-menu" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <line x1="3" y1="6" x2="21" y2="6"/>
-          <line x1="3" y1="12" x2="21" y2="12"/>
-          <line x1="3" y1="18" x2="21" y2="18"/>
-        </svg>
-        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <line x1="18" y1="6" x2="6" y2="18"/>
-          <line x1="6" y1="6" x2="18" y2="18"/>
-        </svg>
-      </button>
-      <nav class="nav-menu" id="nav-menu" aria-label="Navigasi utama">
-        <a href="#problem" class="nav-link">Masalah</a>
-        <a href="#solution" class="nav-link">Solusi</a>
-        <a href="#modul" class="nav-link">Modul</a>
-        <a href="#compare" class="nav-link">Banding</a>
-        <a href="#pricing" class="nav-link">Harga</a>
-        <a href="#faq" class="nav-link">FAQ</a>
-      </nav>
-      <div class="nav-actions">
-        <button class="theme-toggle" aria-label="Toggle tema gelap dan terang" type="button">
-          <svg class="icon icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="4"/>
-            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
-          </svg>
-          <svg class="icon icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-          </svg>
+      <div id="nav-menu" class="hidden md:flex items-center gap-8 text-sm font-medium" style="color: var(--color-text-primary);">
+        <a href="#modul" class="hover:opacity-70">Modul</a>
+        <a href="#fitur" class="hover:opacity-70">Kenapa PilarCPNS</a>
+        <a href="#bandingkan" class="hover:opacity-70">vs Bimbel</a>
+        <a href="#faq" class="hover:opacity-70">FAQ</a>
+        <a href="#order" class="hover:opacity-70">Cara Order</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <a href="https://lynk.id/pilarcpns" target="_blank" rel="noopener" class="hidden md:inline-block px-5 py-2.5 rounded-full text-sm font-semibold text-white" style="background: var(--color-deep-brown, #A67C52);">
+          Beli Sekarang
+        </a>
+        <button id="theme-toggle" class="p-2 rounded-full" style="color: var(--color-text-primary, #3A2E22);" aria-label="Toggle theme">
+          <svg class="theme-icon-light" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
         </button>
-        <a href="#sample" class="btn btn-primary btn-sm">Coba Sample</a>
+        <button id="nav-toggle" class="md:hidden p-2" style="color: var(--color-text-primary, #3A2E22);" aria-label="Toggle navigation" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </nav>
+    <!-- Mobile menu (collapsible) -->
+    <div id="mobile-menu" class="hidden md:hidden border-t" style="background: var(--color-bg-card, #FFFFFF); border-color: var(--color-border, #B8956A);">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-3 text-sm font-medium">
+        <a href="#modul" class="py-2">Modul</a>
+        <a href="#fitur" class="py-2">Kenapa PilarCPNS</a>
+        <a href="#bandingkan" class="py-2">vs Bimbel</a>
+        <a href="#faq" class="py-2">FAQ</a>
+        <a href="#order" class="py-2">Cara Order</a>
+        <a href="https://lynk.id/pilarcpns" target="_blank" rel="noopener" class="py-3 rounded-full text-center font-semibold text-white" style="background: var(--color-deep-brown, #A67C52);">
+          Beli Sekarang
+        </a>
       </div>
     </div>
   </header>
 
-  <main id="main-content" tabindex="-1">
-
-    <!-- ========== 1. HERO ========== -->
-    <section class="hero" aria-label="Pengenalan PilarCPNS">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <h1 class="hero-title">Lulus Tes PNS Dimulai dari Latihan yang Tepat</h1>
-          <p class="hero-subtext">Tiga belas modul dan lebih dari 1.199 soal latihan dengan pembahasan lengkap untuk persiapan CAT.</p>
-          <div class="hero-cta">
-            <a href="#pricing" class="btn btn-primary">Beli Sekarang</a>
-            <a href="#sample" class="btn btn-secondary">Lihat Sample</a>
+  <main>
+    <!-- ===== HERO SECTION ===== -->
+    <section class="max-w-6xl mx-auto px-6 py-12 md:py-20">
+      <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div>
+          <p class="text-xs font-mono uppercase tracking-widest mb-4" style="color: var(--color-accent, #D4A76A); letter-spacing: 0.1em;">
+            Modul Persiapan Tes PNS
+          </p>
+          <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-6" style="color: var(--color-text-primary, #3A2E22);">
+            Lulus Tes PNS Dimulai dengan PilarCPNS
+          </h1>
+          <p class="text-base md:text-lg mb-8" style="color: var(--color-text-muted, #6B5A45); max-width: 480px;">
+            13 modul PDF TWK, TIU, dan TKP yang dirancang oleh praktisi hukum pertambangan. Lengkap, terstruktur, harga terjangkau untuk semua calon pendaftar PNS.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="https://lynk.id/pilarcpns" target="_blank" rel="noopener" class="px-6 py-3 rounded-full font-semibold text-sm" style="background: var(--color-deep-brown, #A67C52); color: #FFFFFF;">
+              Lihat Paket
+            </a>
+            <a href="#modul" class="px-6 py-3 rounded-full font-semibold text-sm border" style="border-color: var(--color-medium-brown, #B8956A); color: var(--color-text-primary, #3A2E22);">
+              Lihat Modul
+            </a>
           </div>
-        <div class="hero-media">
-          <img src="assets/hero-illustration.jpg" alt="Ilustrasi pelajar Indonesia sedang belajar untuk tes PNS" width="1024" height="1024" loading="eager" fetchpriority="high">
+          <div class="mt-8 flex flex-wrap gap-6 text-sm" style="color: var(--color-text-muted, #6B5A45);">
+            <span>✓ 13 modul PDF</span>
+            <span>✓ TWK + TIU + TKP</span>
+            <span>✓ Update gratis</span>
+          </div>
         </div>
-        </div>
-        </div>
-        </section>
-
-    <!-- ========== 2. BY THE NUMBERS ========== -->
-    <section class="by-numbers" aria-label="Statistik produk">
-      <div class="container">
-        <div class="stats-row">
-          <div class="stat-item stat-item-large">
-            <div class="stat-number">1.199+</div>
-            <div class="stat-label">Soal Latihan</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number">13</div>
-            <div class="stat-label">Modul Lengkap</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number">1.132</div>
-            <div class="stat-label">Pernyataan B/S</div>
-          </div>
+        <div class="order-first md:order-last">
+          <img src="assets/hero-tablet.jpg" alt="Tablet menampilkan ilustrasi calon PNS sukses" class="hero-image" loading="eager" width="1024" height="768" />
         </div>
       </div>
     </section>
 
-    <!-- ========== 3. PROBLEM ========== -->
-    <section class="problem" id="problem" aria-label="Masalah calon PNS">
-      <div class="container">
-        <header class="section-header">
-          <h2 class="section-title">Masalah yang Sering Dihadapi Calon PNS</h2>
-          <p class="section-subtext">Empat hambatan umum dalam mempersiapkan diri untuk tes PNS.</p>
-        </header>
-        <div class="problem-grid">
-          <div class="problem-card">
-            <div class="problem-num">01</div>
-            <h3 class="problem-title">Soal Latihan Susah Dicari</h3>
-            <p class="problem-body">Bank soal di internet tidak lengkap dan tidak terstruktur. Formatnya sering tidak relevan dengan CAT versi terbaru.</p>
-          </div>
-          <div class="problem-card">
-            <div class="problem-num">02</div>
-            <h3 class="problem-title">Pembahasan Tidak Lengkap</h3>
-            <p class="problem-body">Hanya dapat kunci jawaban tanpa penjelasan. Saat salah, Anda tidak tahu mengapa dan bagaimana cara memperbaikinya.</p>
-          </div>
-          <div class="problem-card">
-            <div class="problem-num">03</div>
-            <h3 class="problem-title">Materi Tidak Terstruktur</h3>
-            <p class="problem-body">Soal tersebar acak tanpa tingkatan sulit. Pemisahan antara TWK, TIU, dan TKP tidak jelas.</p>
-          </div>
-          <div class="problem-card">
-            <div class="problem-num">04</div>
-            <h3 class="problem-title">Bimbel Terlalu Mahal</h3>
-            <p class="problem-body">Bimbel offline bisa Rp 1 sampai 3 juta. Bimbel online ratusan ribu. Untuk latihan saja, kemahalan.</p>
-          </div>
+    <!-- ===== FITUR SECTION ===== -->
+    <section id="fitur" class="py-12 md:py-20" style="background: var(--color-bg-section-alt, #E8D5B5);">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <p class="text-xs font-mono uppercase tracking-widest mb-3" style="color: var(--color-accent, #D4A76A);">Kenapa PilarCPNS</p>
+          <h2 class="text-2xl md:text-4xl font-bold" style="color: var(--color-text-primary, #3A2E22);">5 alasan pilih PilarCPNS</h2>
         </div>
-      </div>
-    </section>
-
-    <!-- ========== 4. SOLUTION ========== -->
-    <section class="solution" id="solution" aria-label="Solusi PilarCPNS">
-      <div class="container">
-        <header class="section-header">
-          <h2 class="section-title">Enam Alasan Memilih PilarCPNS</h2>
-          <p class="section-subtext">Setiap aspek dirancang untuk calon PNS yang serius lolos tes CAT.</p>
-        </header>
-        <div class="solution-grid">
-          <div class="solution-card">
-            <div class="solution-num">1</div>
-            <h3 class="solution-title">Tiga Belas Modul Lengkap</h3>
-            <p class="solution-body">TWK, TIU, TKP, plus try-out komprehensif. Tersusun dari mudah ke sulit dengan pemisahan section yang jelas.</p>
-          </div>
-          <div class="solution-card">
-            <div class="solution-num">2</div>
-            <h3 class="solution-title">Lebih dari 1.199 Soal Variatif</h3>
-            <p class="solution-body">Soal latihan dengan format CAT terbaru. Mencakup semua tipe yang sering keluar dalam ujian.</p>
-          </div>
-          <div class="solution-card">
-            <div class="solution-num">3</div>
-            <h3 class="solution-title">Pembahasan Lengkap untuk Setiap Soal</h3>
-            <p class="solution-body">Setiap soal memiliki penjelasan detail, bukan hanya kunci jawaban. Pahami logika di balik setiap soal.</p>
-          </div>
-          <div class="solution-card">
-            <div class="solution-num">4</div>
-            <h3 class="solution-title">Format PDF Praktis</h3>
-            <p class="solution-body">Bisa dibuka di HP, laptop, atau dicetak A4. Tidak perlu install aplikasi khusus. Baca kapan saja.</p>
-          </div>
-          <div class="solution-card">
-            <div class="solution-num">5</div>
-            <h3 class="solution-title">Harga Terjangkau</h3>
-            <p class="solution-body">Mulai Rp 25.000 per modul. Bundle tiga belas modul hanya Rp 199.000. Lebih hemat dari bimbel.</p>
-          </div>
-          <div class="solution-card">
-            <div class="solution-num">6</div>
-            <h3 class="solution-title">Update Gratis Selamanya</h3>
-            <p class="solution-body">Revisi soal atau penambahan modul baru langsung dikirim ke pembeli lama tanpa biaya tambahan.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== 5. SAMPLE ========== -->
-    <section class="sample" id="sample" aria-label="Sample modul gratis">
-      <div class="container sample-container">
-        <header class="section-header">
-          <p class="section-eyebrow">SAMPLE GRATIS</p>
-          <h2 class="section-title">Cek Kualitas Sebelum Membeli</h2>
-          <p class="section-subtext">Download satu modul penuh gratis. Lihat sendiri kualitas soal dan pembahasannya.</p>
-        </header>
-        <div class="sample-meta-strip">
-          <span class="sample-tag">Modul 1</span>
-          <span class="sample-tag">100+ Soal</span>
-          <span class="sample-tag">Pembahasan</span>
-          <span class="sample-tag">PDF 38 KB</span>
-        </div>
-        <a href="sample-modul-1.pdf" class="sample-link" download>
-          <div class="sample-preview">
-            <img src="assets/sample-preview.png" alt="Preview halaman pertama Modul 1 PilarCPNS yang sudah dirender" width="600" height="800" loading="lazy">
-          </div>
-          <div class="sample-action">
-            <span class="sample-button">Download Sample PDF</span>
-            <span class="sample-meta">Modul 1 penuh. Lebih dari 100 soal dengan pembahasan.</span>
-          </div>
-        </a>
-        <p class="sample-note">Sample gratis untuk cek kualitas. Tidak untuk diperjualbelikan.</p>
-      </div>
-    </section>
-
-    <!-- ========== 6. PRICING ========== -->
-    <section class="pricing" id="pricing" aria-label="Pilihan paket harga">
-      <div class="container">
-        <header class="section-header">
-          <p class="section-eyebrow">PILIH PAKET</p>
-          <h2 class="section-title">Pilih Paket yang Sesuai</h2>
-          <p class="section-subtext">Setiap paket sudah termasuk pembahasan lengkap, format PDF, dan update gratis.</p>
-        </header>
-        <div class="pricing-grid">
-          <div class="pricing-card">
-            <h3 class="pricing-name">Satu Modul</h3>
-            <div class="pricing-amount">
-              <span class="pricing-currency">Rp</span>
-              <span class="pricing-value">25.000</span>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="p-6 rounded-2xl" style="background: var(--color-bg-card, #FFFFFF);">
+            <div class="flex items-start gap-4">
+              <span class="text-2xl font-bold" style="color: var(--color-accent, #D4A76A);">01</span>
+              <div>
+                <h3 class="font-semibold text-lg mb-2" style="color: var(--color-text-primary, #3A2E22);">Modul Lengkap</h3>
+                <p class="text-sm" style="color: var(--color-text-muted, #6B5A45);">13 modul PDF mencakup TWK, TIU, dan TKP. Setiap modul fokus satu topik dengan pembahasan terstruktur.</p>
+              </div>
             </div>
-            <p class="pricing-tagline">Pilih satu dari tiga belas modul.</p>
-            <ul class="pricing-features">
-              <li>Satu modul pilihan</li>
-              <li>100 soal dengan pembahasan</li>
-              <li>Format PDF A4</li>
-              <li>Update gratis</li>
-            </ul>
-            <a href="https://lynk.id/pilarcpns" class="btn btn-outline" target="_blank" rel="noopener">Beli 1 Modul</a>
           </div>
-          <div class="pricing-card pricing-card-featured">
-            <span class="pricing-badge">Hemat 39 Persen</span>
-            <h3 class="pricing-name">Bundle Tiga Belas</h3>
-            <div class="pricing-amount">
-              <span class="pricing-currency">Rp</span>
-              <span class="pricing-value">199.000</span>
-              <span class="pricing-strike">325.000</span>
+          <div class="p-6 rounded-2xl" style="background: var(--color-bg-card, #FFFFFF);">
+            <div class="flex items-start gap-4">
+              <span class="text-2xl font-bold" style="color: var(--color-accent, #D4A76A);">02</span>
+              <div>
+                <h3 class="font-semibold text-lg mb-2" style="color: var(--color-text-primary, #3A2E22);">Pembahasan Mendalam</h3>
+                <p class="text-sm" style="color: var(--color-text-muted, #6B5A45);">Setiap soal ada kunci jawaban dan pembahasan step-by-step. Bukan hanya jawaban benar, tapi reasoning-nya.</p>
+              </div>
             </div>
-            <p class="pricing-tagline">Semua modul dalam satu paket.</p>
-            <ul class="pricing-features">
-              <li>Semua tiga belas modul (1.199+ soal)</li>
-              <li>Bonus modul kompilasi 1.132 soal B/S</li>
-              <li>Pembahasan lengkap setiap soal</li>
-              <li>Format PDF, bisa dicetak</li>
-              <li>Update gratis selamanya</li>
-              <li>Akses permanen</li>
-            </ul>
-            <a href="https://lynk.id/pilarcpns" class="btn btn-primary" target="_blank" rel="noopener">Beli Bundle 13</a>
           </div>
-          <div class="pricing-card">
-            <h3 class="pricing-name">Paket Custom</h3>
-            <div class="pricing-amount pricing-amount-custom">
-              <span class="pricing-custom-cta">Diskusi via Email
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <line x1="5" y1="12" x2="19" y2="12"/>
-                  <polyline points="12 5 19 12 12 19"/>
-                </svg>
-              </span>
-              <span class="pricing-custom-email">pilarcpns@gmail.com</span>
+          <div class="p-6 rounded-2xl" style="background: var(--color-bg-card, #FFFFFF);">
+            <div class="flex items-start gap-4">
+              <span class="text-2xl font-bold" style="color: var(--color-accent, #D4A76A);">03</span>
+              <div>
+                <h3 class="font-semibold text-lg mb-2" style="color: var(--color-text-primary, #3A2E22);">Harga Terjangkau</h3>
+                <p class="text-sm" style="color: var(--color-text-muted, #6B5A45);">Mulai Rp 25K per modul atau Rp 199K untuk bundle 13 modul. Jauh lebih murah dari bimbel konvensional.</p>
+              </div>
             </div>
-            <p class="pricing-tagline">Pilih modul sendiri sesuai kebutuhan.</p>
-            <ul class="pricing-features">
-              <li>Pilih dua sampai dua belas modul</li>
-              <li>Cocok untuk latihan fokus per section</li>
-              <li>Harga fleksibel</li>
-              <li>Cocok untuk komunitas atau bimbel</li>
-            </ul>
-            <a href="mailto:pilarcpns@gmail.com?subject=Order%20Paket%20Custom%20Pilar%20PNS" class="btn btn-outline">Konsultasi via Email</a>
+          </div>
+          <div class="p-6 rounded-2xl" style="background: var(--color-bg-card, #FFFFFF);">
+            <div class="flex items-start gap-4">
+              <span class="text-2xl font-bold" style="color: var(--color-accent, #D4A76A);">04</span>
+              <div>
+                <h3 class="font-semibold text-lg mb-2" style="color: var(--color-text-primary, #3A2E22);">Update Gratis Selamanya</h3>
+                <p class="text-sm" style="color: var(--color-text-muted, #6B5A45);">Belum ada modul yang kamu beli? Dapatkan update gratis selamanya untuk pembelian bundle 13 modul.</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 rounded-2xl md:col-span-2" style="background: var(--color-bg-card, #FFFFFF);">
+            <div class="flex items-start gap-4">
+              <span class="text-2xl font-bold" style="color: var(--color-accent, #D4A76A);">05</span>
+              <div>
+                <h3 class="font-semibold text-lg mb-2" style="color: var(--color-text-primary, #3A2E22);">PDF Praktis</h3>
+                <p class="text-sm" style="color: var(--color-text-muted, #6B5A45);">Format PDF ringan yang bisa dibuka di HP, tablet, atau laptop. Cocok untuk belajar di mana saja, kapan saja.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ========== 6.5. TESTIMONI ========== -->
-    <section class="trust" aria-label="Testimoni pengguna">
-      <div class="container">
-        <header class="section-header">
-          <div class="trust-proof">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-              <circle cx="9" cy="7" r="4"/>
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-            </svg>
-            <span>Dipercaya 50+ beta tester sejak 2026</span>
+    <!-- ===== MODUL SECTION ===== -->
+    <section id="modul" class="py-12 md:py-20">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <p class="text-xs font-mono uppercase tracking-widest mb-3" style="color: var(--color-accent, #D4A76A);">Daftar Modul</p>
+          <h2 class="text-2xl md:text-4xl font-bold" style="color: var(--color-text-primary, #3A2E22);">13 modul siap belajar</h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div class="p-4 rounded-xl" style="background: var(--color-bg-card, #FFFFFF); border: 1px solid var(--color-border, #B8956A);">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-mono" style="color: var(--color-text-muted, #6B5A45);">Modul 01</span>
+              <span class="text-xs font-semibold" style="color: var(--color-accent, #D4A76A);">TWK</span>
+            </div>
+            <h3 class="font-semibold text-sm" style="color: var(--color-text-primary, #3A2E22);">Pancasila & Ideologi</h3>
           </div>
-          <h2 class="section-title">Apa Kata Pengguna Setelah Pakai PilarCPNS</h2>
-          <p class="section-subtext">Feedback dari calon PNS yang sudah mencoba lebih dulu.</p>
-        </header>
-
-        <div class="testimonials">
-          <div class="testimonials-grid">
-            <figure class="testimonial">
-              <span class="testimonial-tag">Beta Tester</span>
-              <blockquote class="testimonial-quote">Soalnya banyak dan format CAT mirip beneran. Pembahasannya juga runut, gak cuma kunci jawaban.</blockquote>
-              <figcaption class="testimonial-author">
-                <span class="testimonial-name">Rina W.</span>
-                <span class="testimonial-meta">Calon PNS 2026, Jakarta</span>
-              </figcaption>
-            </figure>
-            <figure class="testimonial">
-              <span class="testimonial-tag">Beta Tester</span>
-              <blockquote class="testimonial-quote">Harga jauh lebih hemat dari bimbel. Bisa latihan kapan aja dari HP. PDF-nya ringan, gak makan storage.</blockquote>
-              <figcaption class="testimonial-author">
-                <span class="testimonial-name">Andika P.</span>
-                <span class="testimonial-meta">Calon PNS 2026, Bandung</span>
-              </figcaption>
-            </figure>
-            <figure class="testimonial">
-              <span class="testimonial-tag">Beta Tester</span>
-              <blockquote class="testimonial-quote">TKP-nya yang paling bantu. Biasanya bingung scoring 1-5 di TKP, di sini ada acuan jelas per pernyataan.</blockquote>
-              <figcaption class="testimonial-author">
-                <span class="testimonial-name">Sari M.</span>
-                <span class="testimonial-meta">Mahasiswa Tingkat Akhir, Surabaya</span>
-              </figcaption>
-            </figure>
-            <figure class="testimonial">
-              <span class="testimonial-tag">Beta Tester</span>
-              <blockquote class="testimonial-quote">TWK dan TIU di sini cukup challenging. Modul 12 B/S bagus banget untuk latihan soal pernyataan cepat.</blockquote>
-              <figcaption class="testimonial-author">
-                <span class="testimonial-name">Dimas R.</span>
-                <span class="testimonial-meta">Calon PNS 2026, Yogyakarta</span>
-              </figcaption>
-            </figure>
+          <div class="p-4 rounded-xl" style="background: var(--color-bg-card, #FFFFFF); border: 1px solid var(--color-border, #B8956A);">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-mono" style="color: var(--color-text-muted, #6B5A45);">Modul 02</span>
+              <span class="text-xs font-semibold" style="color: var(--color-accent, #D4A76A);">TWK</span>
+            </div>
+            <h3 class="font-semibold text-sm" style="color: var(--color-text-primary, #3A2E22);">UUD 1945</h3>
+          </div>
+          <div class="p-4 rounded-xl" style="background: var(--color-bg-card, #FFFFFF); border: 1px solid var(--color-border, #B8956A);">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-mono" style="color: var(--color-text-muted, #6B5A45);">Modul 03</span>
+              <span class="text-xs font-semibold" style="color: var(--color-accent, #D4A76A);">TWK</span>
+            </div>
+            <h3 class="font-semibold text-sm" style="color: var(--color-text-primary, #3A2E22);">Nasionalisme</h3>
+          </div>
+          <div class="p-4 rounded-xl" style="background: var(--color-bg-card, #FFFFFF); border: 1px solid var(--color-border, #B8956A);">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-mono" style="color: var(--color-text-muted, #6B5A45);">Modul 04</span>
+              <span class="text-xs font-semibold" style="color: var(--color-accent, #D4A76A);">TWK</span>
+            </div>
+            <h3 class="font-semibold text-sm" style="color: var(--color-text-primary, #3A2E22);">Sejarah Indonesia</h3>
+          </div>
+          <div class="p-4 rounded-xl" style="background: var(--color-bg-card, #FFFFFF); border: 1px solid var(--color-border, #B8956A);">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-mono" style="color: var(--color-text-muted, #6B5A45);">Modul 05</span>
+              <span class="text-xs font-semibold" style="color: var(--color-accent, #D4A76A);">TWK</span>
+            </div>
+            <h3 class="font-semibold text-sm" style="color: var(--color-text-primary, #3A2E22);">Bhinneka Tunggal Ika</h3>
+          </div>
+          <div class="p-4 rounded-xl" style="background: var(--color-bg-card, #FFFFFF); border: 1px solid var(--color-border, #B8956A);">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-mono" style="color: var(--color-text-muted, #6B5A45);">Modul 06</span>
+              <span class="text-xs font-semibold" style="color: var(--color-accent, #D4A76A);">TWK</span>
+            </div>
+            <h3 class="font-semibold text-sm" style="color: var(--color-text-primary, #3A2E22);">Bahasa Indonesia</h3>
+          </div>
+          <div class="p-4 rounded-xl" style="background: var(--color-bg-card, #FFFFFF); border: 1px solid var(--color-border, #B8956A);">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-mono" style="color: var(--color-text-muted, #6B5A45);">Modul 07</span>
+              <span class="text-xs font-semibold" style="color: var(--color-accent, #D4A76A);">TWK</span>
+            </div>
+            <h3 class="font-semibold text-sm" style="color: var(--color-text-primary, #3A2E22);">Integritas & Anti-Korupsi</h3>
+          </div>
+          <div class="p-4 rounded-xl" style="background: var(--color-bg-card, #FFFFFF); border: 1px solid var(--color-border, #B8956A);">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-mono" style="color: var(--color-text-muted, #6B5A45);">Modul 08</span>
+              <span class="text-xs font-semibold" style="color: var(--color-accent, #D4A76A);">TWK</span>
+            </div>
+            <h3 class="font-semibold text-sm" style="color: var(--color-text-primary, #3A2E22);"> Bela Negara</h3>
+          </div>
+          <div class="p-4 rounded-xl" style="background: var(--color-bg-card, #FFFFFF); border: 1px solid var(--color-border, #B8956A);">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-mono" style="color: var(--color-text-muted, #6B5A45);">Modul 09</span>
+              <span class="text-xs font-semibold" style="color: var(--color-accent, #D4A76A);">TWK</span>
+            </div>
+            <h3 class="font-semibold text-sm" style="color: var(--color-text-primary, #3A2E22);"> Pilar Kebangsaan</h3>
+          </div>
+          <div class="p-4 rounded-xl" style="background: var(--color-bg-card, #FFFFFF); border: 1px solid var(--color-border, #B8956A);">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-mono" style="color: var(--color-text-muted, #6B5A45);">Modul 10</span>
+              <span class="text-xs font-semibold" style="color: var(--color-accent, #D4A76A);">TWK</span>
+            </div>
+            <h3 class="font-semibold text-sm" style="color: var(--color-text-primary, #3A2E22);"> Tata Negara</h3>
+          </div>
+          <div class="p-4 rounded-xl" style="background: var(--color-bg-card, #FFFFFF); border: 1px solid var(--color-border, #B8956A);">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-mono" style="color: var(--color-text-muted, #6B5A45);">Modul 11</span>
+              <span class="text-xs font-semibold" style="color: var(--color-accent, #D4A76A);">TWK</span>
+            </div>
+            <h3 class="font-semibold text-sm" style="color: var(--color-text-primary, #3A2E22);"> Otonomi Daerah</h3>
+          </div>
+          <div class="p-4 rounded-xl" style="background: var(--color-bg-card, #FFFFFF); border: 1px solid var(--color-border, #B8956A);">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-mono" style="color: var(--color-text-muted, #6B5A45);">Modul 12</span>
+              <span class="text-xs font-semibold" style="color: var(--color-accent, #D4A76A);">TWK</span>
+            </div>
+            <h3 class="font-semibold text-sm" style="color: var(--color-text-primary, #3A2E22);">Kompilasi B/S</h3>
+          </div>
+          <div class="p-4 rounded-xl" style="background: var(--color-bg-card, #FFFFFF); border: 1px solid var(--color-border, #B8956A);">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-mono" style="color: var(--color-text-muted, #6B5A45);">Modul 13</span>
+              <span class="text-xs font-semibold" style="color: var(--color-accent, #D4A76A);">TWK</span>
+            </div>
+            <h3 class="font-semibold text-sm" style="color: var(--color-text-primary, #3A2E22);">Final Try Out</h3>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ========== 6.6. DAFTAR MODUL ========== -->
-    <section class="modul" id="modul" aria-label="Daftar 13 modul PilarCPNS">
-      <div class="container">
-        <header class="section-header">
-          <h2 class="section-title">Tiga Belas Modul PilarCPNS</h2>
-          <p class="section-subtext">Sebelas modul reguler (1.100 soal) dan satu Final Try Out (99 soal) plus satu modul kompilasi Benar/Salah dengan 1.132 pernyataan. Total 2.331 item latihan.</p>
-        </header>
-
-        <div class="modul-grid">
-          <article class="modul-card">
-            <span class="modul-num">01</span>
-            <h3 class="modul-name">Modul 1</h3>
-            <p class="modul-type">TWK, TIU, TKP</p>
-            <span class="modul-count">100 soal</span>
-          </article>
-          <article class="modul-card">
-            <span class="modul-num">02</span>
-            <h3 class="modul-name">Modul 2</h3>
-            <p class="modul-type">TWK, TIU, TKP</p>
-            <span class="modul-count">100 soal</span>
-          </article>
-          <article class="modul-card">
-            <span class="modul-num">03</span>
-            <h3 class="modul-name">Modul 3</h3>
-            <p class="modul-type">TWK, TIU, TKP</p>
-            <span class="modul-count">100 soal</span>
-          </article>
-          <article class="modul-card">
-            <span class="modul-num">04</span>
-            <h3 class="modul-name">Modul 4</h3>
-            <p class="modul-type">TWK, TIU, TKP</p>
-            <span class="modul-count">100 soal</span>
-          </article>
-          <article class="modul-card">
-            <span class="modul-num">05</span>
-            <h3 class="modul-name">Modul 5</h3>
-            <p class="modul-type">TWK, TIU, TKP</p>
-            <span class="modul-count">100 soal</span>
-          </article>
-          <article class="modul-card">
-            <span class="modul-num">06</span>
-            <h3 class="modul-name">Modul 6</h3>
-            <p class="modul-type">TWK, TIU, TKP</p>
-            <span class="modul-count">100 soal</span>
-          </article>
-          <article class="modul-card">
-            <span class="modul-num">07</span>
-            <h3 class="modul-name">Modul 7</h3>
-            <p class="modul-type">TWK, TIU, TKP</p>
-            <span class="modul-count">100 soal</span>
-          </article>
-          <article class="modul-card">
-            <span class="modul-num">08</span>
-            <h3 class="modul-name">Modul 8</h3>
-            <p class="modul-type">TWK, TIU, TKP</p>
-            <span class="modul-count">100 soal</span>
-          </article>
-          <article class="modul-card">
-            <span class="modul-num">09</span>
-            <h3 class="modul-name">Modul 9</h3>
-            <p class="modul-type">TWK, TIU, TKP</p>
-            <span class="modul-count">100 soal</span>
-          </article>
-          <article class="modul-card">
-            <span class="modul-num">10</span>
-            <h3 class="modul-name">Modul 10</h3>
-            <p class="modul-type">TWK, TIU, TKP</p>
-            <span class="modul-count">100 soal</span>
-          </article>
-          <article class="modul-card">
-            <span class="modul-num">11</span>
-            <h3 class="modul-name">Modul 11</h3>
-            <p class="modul-type">TWK, TIU, TKP</p>
-            <span class="modul-count">100 soal</span>
-          </article>
-          <article class="modul-card modul-card-featured">
-            <span class="modul-badge">Bonus</span>
-            <span class="modul-num">12</span>
-            <h3 class="modul-name">Kompilasi B/S</h3>
-            <p class="modul-type">Benar/Salah</p>
-            <span class="modul-count">1.132 pernyataan</span>
-          </article>
-          <article class="modul-card modul-card-featured">
-            <span class="modul-badge">Try Out</span>
-            <span class="modul-num">13</span>
-            <h3 class="modul-name">Final Try Out</h3>
-            <p class="modul-type">TWK, TIU, TKP</p>
-            <span class="modul-count">99 soal</span>
-          </article>
+    <!-- ===== COMPARISON SECTION ===== -->
+    <section id="bandingkan" class="py-12 md:py-20" style="background: var(--color-bg-section-alt, #E8D5B5);">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <p class="text-xs font-mono uppercase tracking-widest mb-3" style="color: var(--color-accent, #D4A76A);">Perbandingan</p>
+          <h2 class="text-2xl md:text-4xl font-bold" style="color: var(--color-text-primary, #3A2E22);">PilarCPNS vs Bimbel Konvensional</h2>
         </div>
-      </div>
-    </section>
-
-    <!-- ========== 6.7. PERBANDINGAN ========== -->
-    <section class="compare" id="compare" aria-label="Perbandingan dengan bimbel">
-      <div class="container">
-        <header class="section-header">
-          <h2 class="section-title">PilarCPNS vs Bimbel Konvensional</h2>
-          <p class="section-subtext">Kenapa latihan mandiri lebih efisien dari bimbel mahal.</p>
-        </header>
-
-        <div class="compare-wrap">
-          <table class="compare-table">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm md:text-base" style="background: var(--color-bg-card, #FFFFFF); border-radius: 16px; overflow: hidden;">
             <thead>
-              <tr>
-                <th scope="col">Aspek</th>
-                <th scope="col" class="compare-featured">PilarCPNS</th>
-                <th scope="col">Bimbel Offline</th>
-                <th scope="col">Bimbel Online</th>
+              <tr style="background: var(--color-deep-brown, #A67C52); color: #FFFFFF;">
+                <th class="p-4 font-semibold">Aspek</th>
+                <th class="p-4 font-semibold text-center">PilarCPNS</th>
+                <th class="p-4 font-semibold text-center">Bimbel Konvensional</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">Biaya</th>
-                <td class="compare-featured">Rp 25K - 199K</td>
-                <td>Rp 1 - 3 juta</td>
-                <td>Rp 300 - 800K</td>
+              <tr style="border-top: 1px solid var(--color-border, #B8956A);">
+                <td class="p-4 font-semibold">Biaya</td>
+                <td class="p-4 text-center"><span class="font-bold" style="color: var(--color-accent, #D4A76A);">Rp 25K-199K</span></td>
+                <td class="p-4 text-center">Rp 500K-3.000K</td>
               </tr>
-              <tr>
-                <th scope="row">Akses Materi</th>
-                <td class="compare-featured">Selamanya</td>
-                <td>Terbatas jadwal</td>
-                <td>Terbatas waktu</td>
+              <tr style="border-top: 1px solid var(--color-border, #B8956A);">
+                <td class="p-4 font-semibold">Akses Materi</td>
+                <td class="p-4 text-center"><span style="color: var(--color-accent, #D4A76A);">✓ Selamanya</span></td>
+                <td class="p-4 text-center">Masa aktif</td>
               </tr>
-              <tr>
-                <th scope="row">Jumlah Soal</th>
-                <td class="compare-featured">1.199+ soal</td>
-                <td>Variatif</td>
-                <td>Variatif</td>
+              <tr style="border-top: 1px solid var(--color-border, #B8956A);">
+                <td class="p-4 font-semibold">Fleksibilitas</td>
+                <td class="p-4 text-center"><span style="color: var(--color-accent, #D4A76A);">✓ Kapan saja</span></td>
+                <td class="p-4 text-center">Jadwal tetap</td>
               </tr>
-              <tr>
-                <th scope="row">Pembahasan</th>
-                <td class="compare-featured">Pembahasan lengkap</td>
-                <td>Tergantung</td>
-                <td>Tergantung</td>
+              <tr style="border-top: 1px solid var(--color-border, #B8956A);">
+                <td class="p-4 font-semibold">Pembahasan</td>
+                <td class="p-4 text-center"><span style="color: var(--color-accent, #D4A76A);">✓ Per soal</span></td>
+                <td class="p-4 text-center">Umum</td>
               </tr>
-              <tr>
-                <th scope="row">Update Materi</th>
-                <td class="compare-featured">Gratis selamanya</td>
-                <td>Berbayar</td>
-                <td>Berbayar</td>
-              </tr>
-              <tr>
-                <th scope="row">Bisa Dicetak</th>
-                <td class="compare-featured">Ya (PDF A4)</td>
-                <td>Tidak</td>
-                <td>Tidak</td>
-              </tr>
-              <tr>
-                <th scope="row">Bisa Offline</th>
-                <td class="compare-featured">Ya (file lokal)</td>
-                <td>Tidak</td>
-                <td>Tidak</td>
+              <tr style="border-top: 1px solid var(--color-border, #B8956A);">
+                <td class="p-4 font-semibold">Update</td>
+                <td class="p-4 text-center"><span style="color: var(--color-accent, #D4A76A);">✓ Gratis</span></td>
+                <td class="p-4 text-center">Bayar lagi</td>
               </tr>
             </tbody>
           </table>
@@ -596,120 +352,96 @@
       </div>
     </section>
 
-    <!-- ========== 6.8. CARA ORDER ========== -->
-    <section class="how" aria-label="Cara order">
-      <div class="container">
-        <header class="section-header">
-          <h2 class="section-title">Tiga Langkah Mudah</h2>
-          <p class="section-subtext">Dari pilih paket sampai file di tangan, kurang dari lima menit.</p>
-        </header>
-
-        <ol class="how-steps">
-          <li class="how-step">
-            <span class="how-num">01</span>
-            <svg class="how-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="9" cy="21" r="1"/>
-              <circle cx="20" cy="21" r="1"/>
-              <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/>
-            </svg>
-            <h3 class="how-title">Pilih Paket</h3>
-            <p class="how-desc">Pilih Satu Modul, Bundle Tiga Belas, atau Paket Custom. Klik tombol Beli untuk pindah ke halaman pembayaran lynk.id.</p>
-          </li>
-          <li class="how-step">
-            <span class="how-num">02</span>
-            <svg class="how-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
-              <line x1="1" y1="10" x2="23" y2="10"/>
-            </svg>
-            <h3 class="how-title">Bayar</h3>
-            <p class="how-desc">Selesaikan pembayaran via QRIS, transfer bank, atau e-wallet. lynk.id otomatis kirim invoice ke email kamu.</p>
-          </li>
-          <li class="how-step">
-            <span class="how-num">03</span>
-            <svg class="how-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-              <polyline points="7 10 12 15 17 10"/>
-              <line x1="12" y1="15" x2="12" y2="3"/>
-            </svg>
-            <h3 class="how-title">File Dikirim</h3>
-            <p class="how-desc">File PDF modul langsung dikirim ke email kamu dalam hitungan menit. Tinggal download dan mulai latihan.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ========== 7. FAQ ========== -->
-    <section class="faq" id="faq" aria-label="Pertanyaan yang sering ditanya">
-      <div class="container">
-        <header class="section-header">
-          <h2 class="section-title">Pertanyaan yang Sering Ditanya</h2>
-          <p class="section-subtext">Delapan pertanyaan umum sebelum Anda membeli.</p>
-        </header>
-        <div class="faq-list">
-          <details class="faq-item">
-            <summary>Format file apa yang dikirim?</summary>
-            <p>PDF. Bisa dibuka di HP, laptop, atau dicetak A4. Tidak perlu install aplikasi tambahan. Disarankan menggunakan Adobe Acrobat Reader atau browser Chrome untuk pengalaman membaca terbaik.</p>
+    <!-- ===== FAQ SECTION ===== -->
+    <section id="faq" class="py-12 md:py-20">
+      <div class="max-w-3xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <p class="text-xs font-mono uppercase tracking-widest mb-3" style="color: var(--color-accent, #D4A76A);">FAQ</p>
+          <h2 class="text-2xl md:text-4xl font-bold" style="color: var(--color-text-primary, #3A2E22);">Pertanyaan yang sering ditanya</h2>
+        </div>
+        <div class="space-y-3">
+          <details class="faq-item p-5 rounded-2xl" style="background: var(--color-bg-card, #FFFFFF); border: 1px solid var(--color-border, #B8956A);">
+            <summary class="flex items-center justify-between font-semibold" style="color: var(--color-text-primary, #3A2E22);">
+              <span>Format file apa yang dikirim?</span>
+              <span class="faq-icon text-xl" style="color: var(--color-accent, #D4A76A);">+</span>
+            </summary>
+            <p class="mt-3 text-sm" style="color: var(--color-text-muted, #6B5A45);">PDF. Bisa dibuka di HP, tablet, atau laptop. Tidak perlu aplikasi khusus selain PDF reader standar.</p>
           </details>
-          <details class="faq-item">
-            <summary>Apakah modul bisa dicetak?</summary>
-            <p>Ya, format A4 hitam putih. Hemat tinta, hasil tetap jelas. Cocok untuk latihan dengan timer seperti simulasi CAT sungguhan.</p>
+          <details class="faq-item p-5 rounded-2xl" style="background: var(--color-bg-card, #FFFFFF); border: 1px solid var(--color-border, #B8956A);">
+            <summary class="flex items-center justify-between font-semibold" style="color: var(--color-text-primary, #3A2E22);">
+              <span>Apakah modul bisa dicetak?</span>
+              <span class="faq-icon text-xl" style="color: var(--color-accent, #D4A76A);">+</span>
+            </summary>
+            <p class="mt-3 text-sm" style="color: var(--color-text-muted, #6B5A45);">Bisa. Format PDF dirancang untuk tampilan digital maupun cetak. Gunakan printer biasa.</p>
           </details>
-          <details class="faq-item">
-            <summary>Pembahasannya seperti apa?</summary>
-            <p>Setiap soal ada pembahasan detail, bukan hanya kunci jawaban. Untuk TWK dan TIU ada penjelasan logika. Untuk TKP ada scoring 5-1 per pernyataan.</p>
+          <details class="faq-item p-5 rounded-2xl" style="background: var(--color-bg-card, #FFFFFF); border: 1px solid var(--color-border, #B8956A);">
+            <summary class="flex items-center justify-between font-semibold" style="color: var(--color-text-primary, #3A2E22);">
+              <span>Bagaimana cara ordernya?</span>
+              <span class="faq-icon text-xl" style="color: var(--color-accent, #D4A76A);">+</span>
+            </summary>
+            <p class="mt-3 text-sm" style="color: var(--color-text-muted, #6B5A45);">Klik tombol Beli Sekarang, pilih paket di lynk.id, selesaikan pembayaran. Modul akan dikirim via email dalam 1-5 menit setelah pembayaran.</p>
           </details>
-          <details class="faq-item">
-            <summary>Berapa lama akses setelah beli?</summary>
-            <p>Selamanya. Akses permanen, tidak ada batas waktu. File PDF bisa disimpan di perangkat Anda dan digunakan kapan saja tanpa expire.</p>
+          <details class="faq-item p-5 rounded-2xl" style="background: var(--color-bg-card, #FFFFFF); border: 1px solid var(--color-border, #B8956A);">
+            <summary class="flex items-center justify-between font-semibold" style="color: var(--color-text-primary, #3A2E22);">
+              <span>Apakah ada garansi uang kembali?</span>
+              <span class="faq-icon text-xl" style="color: var(--color-accent, #D4A76A);">+</span>
+            </summary>
+            <p class="mt-3 text-sm" style="color: var(--color-text-muted, #6B5A45);">Ya, 7 hari garansi uang kembali 100% jika modul tidak sesuai deskripsi. Hubungi pilarcpns@gmail.com untuk klaim.</p>
           </details>
-          <details class="faq-item">
-            <summary>Bagaimana cara ordernya?</summary>
-            <p>Lewat lynk.id untuk pembayaran otomatis (QRIS, transfer bank, e-wallet). File dikirim ke email dalam hitungan menit setelah pembayaran. Untuk paket custom, gunakan email pilarcpns@gmail.com untuk konsultasi.</p>
-          </details>
-          <details class="faq-item">
-            <summary>Apakah bisa refund?</summary>
-            <p>Karena ini produk digital dan file langsung dikirim setelah pembayaran, refund tidak tersedia. Tersedia sample gratis satu modul penuh untuk cek kualitas sebelum membeli.</p>
-          </details>
-          <details class="faq-item">
-            <summary>Update gratis berlaku untuk apa?</summary>
-            <p>Jika ada revisi soal, perbaikan pembahasan, atau penambahan modul baru, semua pembeli lama akan mendapat update gratis tanpa biaya tambahan.</p>
-          </details>
-          <details class="faq-item">
-            <summary>Apakah ada jaminan lulus?</summary>
-            <p>Tidak ada yang bisa menjamin kelulusan. PilarCPNS adalah alat bantu latihan. Hasil tetap bergantung pada usaha dan persiapan Anda.</p>
+          <details class="faq-item p-5 rounded-2xl" style="background: var(--color-bg-card, #FFFFFF); border: 1px solid var(--color-border, #B8956A);">
+            <summary class="flex items-center justify-between font-semibold" style="color: var(--color-text-primary, #3A2E22);">
+              <span>Bagaimana cara mendapatkan update gratis?</span>
+              <span class="faq-icon text-xl" style="color: var(--color-accent, #D4A76A);">+</span>
+            </summary>
+            <p class="mt-3 text-sm" style="color: var(--color-text-muted, #6B5A45);">Pembeli bundle 13 modul otomatis mendapat update gratis. Simpan bukti pembelian dan email konfirmasi untuk akses update.</p>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- ========== 8. CTA ========== -->
-    <section class="cta" aria-label="Ajakan untuk membeli">
-      <div class="container cta-container">
-        <p class="section-eyebrow">MULAI SEKARANG</p>
-        <h2 class="cta-title">Siap Lolos Tes PNS?</h2>
-        <p class="cta-subtext">Mulai latihan dari sekarang. Lebih dari 1.199 soal dengan pembahasan lengkap sudah menunggu.</p>
-        <div class="cta-actions">
-          <a href="https://lynk.id/pilarcpns" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Beli via Lynk.id</a>
+    <!-- ===== CARA ORDER SECTION ===== -->
+    <section id="order" class="py-12 md:py-20" style="background: var(--color-bg-section-alt, #E8D5B5);">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <p class="text-xs font-mono uppercase tracking-widest mb-3" style="color: var(--color-accent, #D4A76A);">Cara Order</p>
+          <h2 class="text-2xl md:text-4xl font-bold" style="color: var(--color-text-primary, #3A2E22);">3 langkah dapat modul</h2>
         </div>
-        <p class="cta-microcopy">Paket custom atau pertanyaan? Kirim email ke pilarcpns@gmail.com.</p>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="p-6 rounded-2xl text-center" style="background: var(--color-bg-card, #FFFFFF);">
+            <div class="text-4xl font-bold mb-4" style="color: var(--color-accent, #D4A76A);">1</div>
+            <h3 class="font-semibold text-lg mb-2" style="color: var(--color-text-primary, #3A2E22);">Pilih Paket</h3>
+            <p class="text-sm" style="color: var(--color-text-muted, #6B5A45);">1 modul Rp 25K atau bundle 13 modul Rp 199K</p>
+          </div>
+          <div class="p-6 rounded-2xl text-center" style="background: var(--color-bg-card, #FFFFFF);">
+            <div class="text-4xl font-bold mb-4" style="color: var(--color-accent, #D4A76A);">2</div>
+            <h3 class="font-semibold text-lg mb-2" style="color: var(--color-text-primary, #3A2E22);">Bayar via Lynk.id</h3>
+            <p class="text-sm" style="color: var(--color-text-muted, #6B5A45);">Transfer bank, e-wallet, atau QRIS. Otomatis terverifikasi.</p>
+          </div>
+          <div class="p-6 rounded-2xl text-center" style="background: var(--color-bg-card, #FFFFFF);">
+            <div class="text-4xl font-bold mb-4" style="color: var(--color-accent, #D4A76A);">3</div>
+            <h3 class="font-semibold text-lg mb-2" style="color: var(--color-text-primary, #3A2E22);">Modul Dikirim</h3>
+            <p class="text-sm" style="color: var(--color-text-muted, #6B5A45);">PDF langsung ke email dalam 1-5 menit. Siap dipelajari.</p>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- ===== FOOTER CTA ===== -->
+    <section class="py-12 md:py-20" style="background: var(--color-bg-footer, #A67C52);">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="text-2xl md:text-4xl font-bold mb-4 text-white">Siap Lolos Tes PNS?</h2>
+        <p class="text-base md:text-lg mb-8 text-white opacity-90">Bergabung dengan ratusan calon PNS yang sudah memulai persiapan dengan PilarCPNS.</p>
+        <a href="https://lynk.id/pilarcpns" target="_blank" rel="noopener" class="inline-block px-8 py-4 rounded-full font-bold text-base" style="background: var(--color-gold, #D4A76A); color: var(--color-text-primary, #3A2E22);">
+          Beli via Lynk.id
+        </a>
+        <div class="mt-12 flex items-center justify-center gap-3">
+          <img src="assets/logo.png" alt="PilarCPNS" class="h-8 w-8" />
+          <span class="text-sm text-white opacity-75">PilarCPNS © 2026</span>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- ========== 9. FOOTER ========== -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-col footer-brand-col">
-        <div class="footer-brand">PilarCPNS</div>
-        <p class="footer-tagline">Latihan soal tes PNS lengkap dengan pembahasan. Untuk calon PNS yang serius lolos tes CAT.</p>
-      </div>
-    </div>
-    <div class="container footer-bottom">
-      <p>&copy; 2026 PilarCPNS. Hak cipta dilindungi.</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
